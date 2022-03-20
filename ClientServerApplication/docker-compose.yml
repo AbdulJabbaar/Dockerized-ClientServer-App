@@ -6,7 +6,7 @@ services:
     image: ${DOCKER_REGISTRY-}server
     build:
       context: .
-      dockerfile: Server/Dockerfile
+      dockerfile: ServerAppPython/Dockerfile
     ports:
      - 4000:4000
     networks:
