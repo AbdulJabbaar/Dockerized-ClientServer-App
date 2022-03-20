@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  server:
+    container_name: server_container
+    image: ${DOCKER_REGISTRY-}server
+    build:
+      context: .
+      dockerfile: Server/Dockerfile
+    ports:
+     - 4000:4000
+    networks:
+     server_default:
+  client:
+    container_name: client_container
+    image: ${DOCKER_REGISTRY-}client
+    build:
+      context: .
+      dockerfile: Client/Dockerfile
+    networks: 
+      server_default:
+networks:
+  server_default:
+   driver: bridge
+
+  
