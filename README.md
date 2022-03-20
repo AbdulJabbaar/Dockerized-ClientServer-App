@@ -20,4 +20,4 @@ dotnet Client.dll start
 ```
 This will start the client app and what else you type on bash it will be printed inside the Server application. For that you can check the terminal of server container.
 
-If you want to stop the session type * in clinet app and ti will end the session with server.
+If you want to stop the session type * in clinet app and it will end the session with server.
